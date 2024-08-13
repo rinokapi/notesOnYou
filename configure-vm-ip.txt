@@ -1,0 +1,38 @@
+malware analysis vm:
+- virtualbox
+    - create internal network "malnet"
+
+- remnux
+    - using internal network "malnet"
+    - edit /etc/netplan/01-netcfg.yaml
+          ethernets:
+            enp0s3:
+              dhcp4: no
+              addresses: [10.0.0.3/24] # remnux ip address
+              gateway4: 10.0.0.1
+    - run: sudo netplan apply
+    - run: inetsim
+    - run: accept-all-ips start enp0s3
+    - run: fakedns
+
+- oracle
+    - edit /etc/sysconfig/network-scripts/ifcfg-enp0s3
+        BOOTPROTO="none"
+        PREFIX=24
+        IPADDR=10.0.0.4
+        GATEWAY=10.0.0.3
+    - edit /etc/resolv.conf
+        nameserver 10.0.0.3
+    - run: systemctl restart network
+    - testing:
+        ping 10.0.0.3 # ping remnux
+        ping 8.8.8.8 # ping out net
+        ping delsite.com # test fakedns
+        curl delsite.com # test inetsim
+
+CentOS7 on vbox bridger adapter:
+- check windows Wi-Fi gateway (192.168.205.129)
+- ip addr flush dev enp0s3
+- ip addr add 192.168.205.100/24 dev enp0s3 (local ip only)
+- ip route add default via 192.168.205.129 dev enp0s3 (local and external ip)
+- echo "nameserver 192.168.205.129" > /etc/resolv.conf (local, external, and dns)

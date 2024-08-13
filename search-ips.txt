@@ -1,0 +1,26 @@
+full list service:
+- https://www.netify.ai/resources/applications/
+
+tools:
+- https://www.netify.ai/resources/applications/[sometingToSearch]
+- https://www.netify.ai/resources/cdn/[sometingToSearch]
+- https://www.netify.ai/resources/crowdsource/[sometingToSearch]
+- https://www.netify.ai/resources/domains/[sometingToSearch]
+- https://www.netify.ai/resources/edge/[sometingToSearch]
+- https://www.netify.ai/resources/hosting/[sometingToSearch]
+- https://www.netify.ai/resources/ips/[sometingToSearch]
+- https://www.netify.ai/resources/macs/[sometingToSearch]
+- https://www.netify.ai/resources/mobile/[sometingToSearch]
+- https://www.netify.ai/resources/networks/[sometingToSearch]
+- https://www.netify.ai/resources/primary/[sometingToSearch]
+- https://www.netify.ai/resources/protocol/[sometingToSearch]
+- https://www.netify.ai/resources/protocols/[sometingToSearch]
+- https://www.netify.ai/resources/saas/[sometingToSearch]
+- https://www.netify.ai/resources/speedtest/[sometingToSearch]
+- https://www.netify.ai/resources/telco/[sometingToSearch]
+- https://www.netify.ai/resources/tor/[sometingToSearch]
+- https://www.netify.ai/resources/vpns/[sometingToSearch]
+
+example:
+- https://www.netify.ai/resources/ips/8.8.8.8
+- https://www.netify.ai/resources/applications/google
