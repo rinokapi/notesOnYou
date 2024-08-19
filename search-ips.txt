@@ -2,25 +2,37 @@ full list service:
 - https://www.netify.ai/resources/applications/
 
 tools:
-- https://www.netify.ai/resources/applications/[sometingToSearch]
-- https://www.netify.ai/resources/cdn/[sometingToSearch]
-- https://www.netify.ai/resources/crowdsource/[sometingToSearch]
-- https://www.netify.ai/resources/domains/[sometingToSearch]
-- https://www.netify.ai/resources/edge/[sometingToSearch]
-- https://www.netify.ai/resources/hosting/[sometingToSearch]
-- https://www.netify.ai/resources/ips/[sometingToSearch]
-- https://www.netify.ai/resources/macs/[sometingToSearch]
-- https://www.netify.ai/resources/mobile/[sometingToSearch]
-- https://www.netify.ai/resources/networks/[sometingToSearch]
-- https://www.netify.ai/resources/primary/[sometingToSearch]
-- https://www.netify.ai/resources/protocol/[sometingToSearch]
-- https://www.netify.ai/resources/protocols/[sometingToSearch]
-- https://www.netify.ai/resources/saas/[sometingToSearch]
-- https://www.netify.ai/resources/speedtest/[sometingToSearch]
-- https://www.netify.ai/resources/telco/[sometingToSearch]
-- https://www.netify.ai/resources/tor/[sometingToSearch]
-- https://www.netify.ai/resources/vpns/[sometingToSearch]
-
+netify
+- https://www.netify.ai/resources/applications/
+- https://www.netify.ai/resources/cdn/
+- https://www.netify.ai/resources/crowdsource/
+- https://www.netify.ai/resources/domains/
+- https://www.netify.ai/resources/edge/
+- https://www.netify.ai/resources/hosting/
+- https://www.netify.ai/resources/ips/
+- https://www.netify.ai/resources/macs/
+- https://www.netify.ai/resources/mobile/
+- https://www.netify.ai/resources/networks/
+- https://www.netify.ai/resources/primary/
+- https://www.netify.ai/resources/protocol/
+- https://www.netify.ai/resources/protocols/
+- https://www.netify.ai/resources/saas/
+- https://www.netify.ai/resources/speedtest/
+- https://www.netify.ai/resources/telco/
+- https://www.netify.ai/resources/tor/
+- https://www.netify.ai/resources/vpns/
+dnslytics
+- https://search.dnslytics.com/
+ipinfo
+- https://ipinfo.io/account/search/
+virustotal
+- https://www.virustotal.com/gui/home/search/
+censys
+- https://search.censys.io/hosts/8.8.8.8
+shodan
+- https://www.shodan.io/host/8.8.8.8
+lookyloo
+- https://lookyloo.circl.lu/capture
 example:
 - https://www.netify.ai/resources/ips/8.8.8.8
 - https://www.netify.ai/resources/applications/google
