@@ -1,0 +1,51 @@
+#############---MANUAL---####################
+# Function to change win.path to wsl.path
+cdwin() {
+    # Check if an argument is provided
+    if [ $# -ne 1 ]; then
+        echo "Usage: cdwin 'C:\\User\\a\\b\\c\\'"
+        return 1
+    fi
+
+    # Get the input path from the first argument
+    input="$1"
+
+    # Replace backslashes with forward slashes
+    input="${input//\\/\/}"
+
+    # Remove the drive letter
+    input="${input:2}"
+
+    # Add "/mnt/c" prefix
+    output="/mnt/c$input"
+
+    # Change directory to $output
+    cd "$output"
+}
+
+# Function to print win.path to wsl.path
+printwinpath() {
+    # Check if an argument is provided
+    if [ $# -ne 1 ]; then
+        echo "Usage: cdwin 'C:\\User\\a\\b\\c\\'"
+        return 1
+    fi
+
+    # Get the input path from the first argument
+    input="$1"
+
+    # Replace backslashes with forward slashes
+    input="${input//\\/\/}"
+
+    # Remove the drive letter
+    input="${input:2}"
+
+    # Add "/mnt/c" prefix
+    output="/mnt/c$input"
+
+    # Change directory to $output
+    echo "$output"
+}
+
+add in ~/.bashrc file
+run: source ~/.bashrc

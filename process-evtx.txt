@@ -1,0 +1,12 @@
+unzip winevt_xxx
+1. for i in *.zip; do unzip "$i" -d "${i%.zip}"; rm "$i"; done
+mv .evtx
+2. for i in $(ls); do find $i -type f -iname '*.evt*' -exec mv {} $i \;; done
+rm empty dir
+3. for i in $(ls); do cd $i; find . -type d -not -path . -exec rm -rf {} \;; cd ..; done
+
+chainsaw:
+for i in $(find ../ -type d -name "winevt_*"); do j=$(echo $i | awk -F'winevt_' '{print $2}'); ./chainsaw/target/release/chainsaw hunt $i -s ./chainsaw/sigma/ --mapping ./chainsaw/mappings/sigma-event-logs-all.yml -r ./chainsaw/rules/ --skip-errors --csv --local --output ./chainsaw_$j; done
+
+apt-hunter:
+for i in $(find ../ -type d -name "winevt_*"); do j=$(echo $i | awk -F'winevt_' '{print $2}'); python3 ~/tools/APT-Hunter/APT-Hunter.py -start 2024-01-01 -allreport -p $i -o ./apthunter_$j; done
