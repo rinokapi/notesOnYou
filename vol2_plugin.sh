@@ -17,7 +17,7 @@ function run_command {
     echo "running plugin: $1"
 
     # with output file
-    time python2 ~/tools/volatility/vol.py -f "$memdump_file" --profile="$profile_name" $1 --output-file=./volatility_$hostname/$1_$hostname.txt
+    time python2 ~/tools/volatility/vol.py -f "$memdump_file" --profile="$profile_name" $1 --output-file=volatility_$hostname/$1_$hostname.txt
 
     echo "------------------------------------------------------------"
     echo ""
@@ -51,14 +51,14 @@ commands=(
     modules                    # Print list of loaded modules
     mutantscan                 # Pool scanner for mutex objects
     netscan                    # Scan a Vista (or later) image for connections and sockets
-    networkpackets
+    # networkpackets
     pathcheck
     psinfo
     pslist                     # Print all running processes by following the EPROCESS lists
     psscan                     # Pool scanner for process objects
     pstree                     # Print process list as a tree
     psxview                    # Find hidden processes with various process listings
-    screenshot                 # Save a pseudo#screenshot based on GDI windows
+    # screenshot                 # Save a pseudo#screenshot based on GDI windows
     shutdowntime               # Print ShutdownTime of machine from registry
     ssdt                       # Display SSDT entries
     svcscan                    # Scan for Windows services
