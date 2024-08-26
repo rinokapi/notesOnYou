@@ -17,7 +17,7 @@ function run_command {
     echo "running plugin: $1"
 
     # with output file
-    time python2 ~/tools/volatility/vol.py -f "$memdump_file" --profile="$profile_name" $1 > ./volatility_$hostname/$1_$hostname.txt
+    time python2 ~/tools/volatility/vol.py -f "$memdump_file" --profile="$profile_name" $1 --output-file=./volatility_$hostname/$1_$hostname.txt
 
     echo "------------------------------------------------------------"
     echo ""
