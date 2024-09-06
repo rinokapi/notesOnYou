@@ -40,7 +40,7 @@ commands=(
     handles                    # Print list of open handles for each process
     hashdump                   # Dumps passwords hashes (LM/NTLM) from memory
     hollowfind
-    iehistory                  # Reconstruct Internet Explorer cache / history
+    # iehistory                  # Reconstruct Internet Explorer cache / history
     joblinks                   # Print process job link information
     ldrmodules                 # Detect unlinked DLLs
     lsadump                    # Dump (decrypted) LSA secrets from the registry
